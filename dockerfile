@@ -2,9 +2,6 @@ FROM golang:1.22.5-alpine AS builder
 
 WORKDIR /app
 
-
-RUN go mod download
-
 COPY . .
 
 RUN go build -o main .
